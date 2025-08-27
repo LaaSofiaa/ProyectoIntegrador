@@ -8,9 +8,10 @@ import java.util.Optional;
 public interface UsuarioService {
     Usuario crearUsuario(Usuario usuario);
     List<Usuario> obtenerTodosUsuarios();
-    Optional<Usuario> obtenerUsuarioPorId(Long id);
-    Usuario actualizarUsuario(Long id, Usuario usuario);
-    void eliminarUsuario(Long id);
-    boolean existeUsuario(Long id);
+    Optional<Usuario> obtenerUsuarioPorId(String id);
+    Usuario actualizarUsuario(String id, Usuario usuario);
+    void eliminarUsuario(String id);
+    boolean existeUsuario(String id);
     boolean existeEmail(String email);
+    Optional<Usuario> obtenerUsuarioPorEmail(String email);
 }
